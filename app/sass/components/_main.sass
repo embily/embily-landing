@@ -1,0 +1,223 @@
+@import "vars"
+
+.main
+	position: relative
+	&-bg
+		position: absolute
+		bottom: -62px
+		left: 50%
+		transform: translate(-50%,0)
+		z-index: 11
+		img,svg
+			display: block
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		width: 50%
+		height: 100%
+		background: #F3F7FC
+	.wrapper
+		position: relative
+	&-images
+		position: absolute
+		top: 0
+		right: 0
+		width: 50%
+		height: 100%
+		z-index: 10
+		img,svg
+			display: block
+			position: absolute
+	&-circle
+		position: absolute
+		top: 53%
+		left: 55%
+		transform: translate(-50%,-50%)
+		max-width: 530px
+		width: 100%
+		height: 530px
+		border-radius: 50%
+		background: #fff
+	&-img
+		&__1
+			max-width: 458px
+			top: 127px
+			left: -15px
+			z-index: 11
+			animation: loop__float--relative 10s cubic-bezier(.43,.05,.6,.99) .75s infinite
+		&__2
+			max-width: 530px
+			top: -48px
+			left: 54%
+			transform: translate(-50%,0)
+			z-index: 12
+		&__3
+			max-width: 271px
+			top: 163px
+			right: -9px
+			z-index: 13
+			animation: loop__float--relative 4.5s cubic-bezier(.43,.05,.6,.99) .45s infinite
+	&-wrap
+		padding: 50px 50% 120px 0
+		position: relative
+	&-info
+		padding-right: 20px
+	&-logo
+		padding-bottom: 90px
+		img,svg
+			display: block
+	.section-title
+		text-align: left
+	&-form
+		max-width: 510px
+		margin-bottom: 64px
+		position: relative
+		&__row
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			padding-bottom: 36px
+			position: relative
+			.input-block
+				width: 100%
+				margin-right: 16px
+				p
+					position: absolute
+					bottom: 0
+					left: 0
+					width: 100%
+					padding: 0
+					white-space: nowrap
+
+.form-steps
+	.form-step
+		&.second-step
+			display: none
+	&.active
+		.form-step
+			display: none
+			&.second-step
+				display: block
+	&.successfully
+		.form-step
+			opacity: 0
+			visibility: hidden
+		.successfully-info
+			opacity: 1
+			visibility: visible
+
+@keyframes loop__float--relative
+	0%
+		transform: translateZ(0)
+	50%
+		transform: translate3d(0,-10%,0)
+	100%
+		transform: translateZ(0)
+
+@media only screen and (max-width : 940px)
+	.main
+		&-bg
+			display: none
+		&::after
+			display: none
+		&-logo
+			position: absolute
+			top: 30px
+			left: 0
+			padding: 0
+			z-index: 30
+		&-wrap
+			padding: 614px 0 80px
+		&-images
+			width: 100%
+			height: 534px
+			background: #f3f7fc
+		&-circle
+			width: 394px
+			height: 394px
+			left: 50%
+			top: 50%
+		&-img
+			&__1
+				max-width: 320px
+				left: 50%
+				top: 106px
+				margin-left: -320px
+			&__2
+				max-width: 420px
+				top: -67px
+				left: 50%
+			&__3
+				max-width: 240px
+				top: 100px
+				right: auto
+				left: 50%
+		&-info
+			padding: 0
+
+@media only screen and (max-width : 768px)
+	.main
+		&-logo
+			top: 16px
+		&-info
+			max-width: 510px
+			margin: 0 auto
+			.social
+				justify-content: center
+		.section-title
+			text-align: center
+			margin-bottom: 32px
+		&-form
+			margin-bottom: 60px
+			&__row
+				display: block
+				padding: 0
+				.input-block
+					margin: 0
+					p
+						position: static
+						padding: 14px 0 18px
+						white-space: normal
+				.primary-btn
+					display: block
+					width: 100%
+
+@media only screen and (max-width : 640px)
+	.main
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 434px
+			background: #F3F7FC
+		&-wrap
+			padding: 514px 0 80px
+		&-images
+			right: auto
+			left: 50%
+			transform: translate(-50%,0)
+			width: 360px
+			height: 434px
+			img,svg
+				&.main-img__2
+					display: none
+		&-img
+			&__1
+				max-width: 244px
+				left: 65%
+				margin-left: -244px
+			&__2
+				display: none
+			&__3
+				max-width: 240px
+				top: 66px
+				left: 27%
+		&-circle
+			width: 294px
+			height: 294px
+			top: 57%

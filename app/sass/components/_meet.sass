@@ -1,0 +1,136 @@
+@import "vars"
+
+.meet
+	//height: 1050px
+	padding: 120px 0 202px
+	position: relative
+	z-index: 20
+	&::after
+		display: none
+		content: ''
+		position: absolute
+		top: -38px
+		left: -38px
+		width: 59px
+		height: 59px
+		border: 8px solid #F3F7FC
+		border-radius: 50%
+		z-index: 30
+	&-wrap
+		display: flex
+		flex-flow: row nowrap
+	&-images
+		width: 50%
+		position: relative
+		img,svg
+			display: block
+	&-img
+		position: absolute
+		&__1
+			max-width: 305px
+			bottom: -7px
+			left: 0
+			z-index: 14
+		&__2
+			max-width: 320px
+			top: 20px
+			right: 60px
+			z-index: 11
+		&__3
+			max-width: 246px
+			bottom: -128px
+			right: 21px
+			z-index: 13
+		&__4
+			right: 30px
+			bottom: 110px
+			z-index: 12
+	&-info
+		width: 50%
+		padding: 20px 0 0 28px
+	&-item
+		border: 2px solid transparent
+		border-radius: 8px
+		padding: 30px 24px 30px 47px
+		font-size: 22px
+		line-height: 32px
+		font-weight: 500
+		color: #fff
+		margin-bottom: 32px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: -23px
+			transform: translate(0,-50%)
+			width: 48px
+			height: 48px
+			border-radius: 50%
+		&:last-child
+			margin-bottom: 0
+		&__1
+			border-color: $colorAccent
+			&::after
+				background: $colorAccent
+		&__2
+			border-color: #F3CD81
+			&::after
+				background: #F3CD81
+		&__3
+			border-color: #fff
+			&::after
+				background: #fff
+
+@media only screen and (max-width : 940px)
+	.meet
+		padding: 80px 0
+		&::after
+			display: block
+		&-wrap
+			display: block
+			padding-top: 354px
+			position: relative
+		&-images
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%,0)
+			width: 328px
+			height: 354px
+			margin: 0 auto
+		&-img
+			&__1
+				max-width: 168px
+				top: auto
+				bottom: 67px
+				left: 0
+			&__2
+				max-width: 176px
+				top: 0
+				right: 21px
+			&__3
+				max-width: 135px
+				bottom: 3px
+				right: 0
+			&__4
+				max-width: 49px
+				bottom: 130px
+				right: 3px
+		&-info
+			width: 100%
+			padding: 0 0 0 11px
+			margin-top: -8px
+
+@media only screen and (max-width : 768px)
+	.meet
+		.section-title
+			margin-bottom: 60px
+		&-item
+			font-size: 14px
+			line-height: 20px
+			padding: 22px 22px 22px 27px
+			&::after
+				width: 24px
+				height: 24px
+				left: -12px

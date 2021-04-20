@@ -1,0 +1,134 @@
+@import "vars"
+
+.contacts
+	padding: 120px 0
+	position: relative
+	overflow: hidden
+	&-bg
+		position: absolute
+		width: 192px
+		height: 192px
+		border: 18px solid #fff
+		border-radius: 50%
+		&__1
+			top: 41px
+			right: -96px
+		&__2
+			bottom: -96px
+			left: -78px
+	.wrapper
+		position: relative
+		z-index: 10
+	&-wrap
+		max-width: 480px
+		margin: 0 auto
+	&-logo
+		margin: 0 0 64px
+		img,svg
+			display: block
+			margin: 0 auto
+	&-head
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		padding-bottom: 28px
+		img,svg
+			display: block
+			min-width: 64px
+			max-width: 64px
+			margin-right: 24px
+	&-title
+		display: block
+		font-size: 22px
+		line-height: 32px
+		font-weight: 500
+		span
+			color: $colorAccent
+	&-form
+		margin-bottom: 80px
+		position: relative
+		.primary-btn
+			display: block
+			width: 100%
+	&-subtitle
+		display: block
+		font-size: 21px
+		line-height: 32px
+		font-weight: 500
+		margin: 0 0 16px
+		b
+			font-weight: 500
+			color: rgba(255, 255, 255, 0.5)
+	.social
+		justify-content: center
+	&-list
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: center
+		position: absolute
+		bottom: -70px
+		left: 50%
+		transform: translate(-50%,0)
+		li
+			padding: 0 20px
+			a
+				font-size: 16px
+				line-height: 20px
+				white-space: nowrap
+				color: #fff
+
+@media only screen and (max-width : 940px)
+	.contacts
+		padding: 80px 0
+		&-list
+			position: static
+			transform: translate(0,0)
+			padding-top: 40px
+
+@media only screen and (max-width : 640px)
+	.contacts
+		&-bg
+			width: 101px
+			height: 101px
+			border: 10px solid #fff
+			&__1
+				top: -51px
+				right: -59px
+			&__2
+				bottom: -62px
+				left: -45px
+		&-wrap
+			max-width: 400px
+		&-logo
+			margin-bottom: 40px
+			img,svg
+				max-width: 130px
+		.input-block p
+			padding: 14px 0 18px
+		&-head
+			padding-bottom: 24px
+			img,svg
+				min-width: 40px
+				max-width: 40px
+				margin-right: 8px
+		&-title
+			font-size: 16px
+			line-height: 20px
+		&-form
+			margin-bottom: 60px
+		&-subtitle
+			text-align: center
+			font-size: 16px
+			line-height: 20px
+			margin-bottom: 16px
+			b
+				display: block
+		&-list
+			display: block
+			padding: 35px 0 0
+			text-align: center
+			li
+				padding: 5px 0
+				&:last-child
+					padding-bottom: 0
